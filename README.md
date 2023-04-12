@@ -1,2 +1,6 @@
 # Hyproton.github.io
-Hyproton's blog
+
+[Hyproton's blog](https://hyproton.github.io/)
+
+Welcome to your visit!
+
