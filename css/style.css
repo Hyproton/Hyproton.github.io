@@ -1,1 +1,110 @@
+body{
+	margin: 0;
+}
 
+.wrapper {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+header {
+    float: left;
+    width: 100%;
+    background-color: #e44d3a;
+}
+.header-data {
+	float: left;
+	width: 100%;
+}
+
+.logo {
+    float: left;
+    width: 94px;
+	margin-right: 20px;
+    margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.search-bar {
+	float: left;
+	width: 215px;
+	margin-top: 9px;
+}
+.search-bar form {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.search-bar form input{
+	outline: none;
+	border: none;
+	border-radius: 5px;
+}
+.search-bar form input {
+	width: 100%;
+	background-color: #fff;
+	height: 38px;
+	color: #b2b2b2;
+	font-size: 12px;
+	padding: 0 10px;
+}
+
+nav {
+	float: left;
+	width: 60%;
+	text-align: right;
+	padding-right: 13px;
+}
+nav ul li {
+	display: inline-block;
+	text-align: center;
+	padding: 13px 13px;
+	position: relative;
+}
+nav ul li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+	z-index: 9999;
+}
+nav ul ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 200px;
+	background-color: #e44d3a;
+	text-align: left;
+	padding: 20px 0 10px 0; 
+	opacity: 0;
+	visibility: hidden;
+	z-index: 999999;
+}
+nav ul ul li {
+	padding: 0;
+	float: left;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 15px;
+	padding: 0 20px;
+}
+nav ul ul li a:hover {
+	color: #fff;
+}
+nav ul ul li a {
+	font-size: 16px;
+}
+nav ul li span {
+	display: block;
+	height: 14px;
+}
+nav ul li span img {
+	float: none;
+}
+nav ul li a {
+	color: #ffffff;
+	font-size: 14px;
+}
+nav > ul > li > a:hover {
+	color: #fff;
+}
