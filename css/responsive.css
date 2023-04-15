@@ -1,0 +1,26 @@
+@media (max-width: 950px) {
+    .menu-plane a {display: none;}
+    .menu-plane a.menu-btn-plane {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .menu-plane.responsive {position: relative;}
+    .menu-plane.responsive .menu-header-plane {
+        position: absolute;
+        border-radius: 5px;
+        background-color: white;
+        top: 100%;
+        right: 0%;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .menu-plane.responsive .menu-header-plane a {
+        color: black;
+        float: left;
+        display: block;
+        text-align: left;
+    }
+}

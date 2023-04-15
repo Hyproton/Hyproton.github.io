@@ -2,7 +2,6 @@
 
 
 body {
-	margin: 0;
 	font-family: 'DM Sans', sans-serif;
 	background-image: url("../svg/bg-animal.svg");
 	background-size: 100% 100%;
@@ -10,8 +9,9 @@ body {
 	background-repeat: no-repeat;
 }
 
-ul {
-	list-style: none;
+* {
+	margin: 0;
+	padding: 0;
 }
 
 button, input {
@@ -19,41 +19,20 @@ button, input {
 	border: none;
 }
 
-a {
-	text-decoration: none;
-	color: white;
-	font-weight: bold;
-}
-
 header {
     float: left;
-	width: 100%;
     background-color: #e2a684;
 }
 
-body, html, .home, header,
-.container, .header-data, .menu-plane, .menu-header-plane, 
-.menu-header-list, .menu-header-list li, .menu-header-list a{
-	height: 100%;
-}
-
-header, .container, .header-data, .menu-plane, .menu-header-plane, 
-.menu-header-list, .menu-header-list li{
-	height: 62px;
-}
-
-.header-data, .menu-plane{
-	display: flex;
-	align-items: center;
-}
-
-.home {
+.home, header {
 	width: 100%;
 }
 
 .header-data {
-	float: left;
 	width: 100%;
+	float: left;
+	display: flex;
+	align-items: center;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -69,7 +48,8 @@ header, .container, .header-data, .menu-plane, .menu-header-plane,
 
 .search-plane {
 	float: left;
-	width: 215px;
+	width: 20%;
+	margin-right: auto;
 }
 
 .search-plane form {
@@ -92,36 +72,34 @@ header, .container, .header-data, .menu-plane, .menu-header-plane,
 .search-plane form button{
 	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;
+	padding: 10px;
 	height: 38px;
 	background-color: #fff;
 }
 
-
 /* menu-palne */
 
-
-.menu-header-plane a {
-	padding: 0 10px;
-	height: 100%;
-	line-height: 62px;
+.menu-plane {
+	position: relative;
+	display: inline-block;
+	margin-right: 1%;
 }
 
-.menu-header-list {
-	margin: 0;
-}
-
-.menu-header-list li {
+.menu-plane a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
 	float: left;
-}
-
-.menu-header-plane a:link, .menu-header-plane a:visited {
-	display: block;/*设置为块元素*/
-	width: 120px;
 	text-align: center;
+	padding: 0 12px;
 }
 
-.menu-header-plane a:hover, .menu-header-plane a:active {
+.menu-plane a:hover, .menu-plane a:active {
 	/* background-color: #bc3b3b; */
 	color: #b1edfa;
 }
 
+.menu-plane .menu-btn-plane {
+	font-size: 38px;
+	display: none;
+}
