@@ -5,11 +5,13 @@
 		<title>Hyproton</title>
 		<link rel="icon" href="svg/logo-HY.svg">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+		<link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.7.0.css">
 	</head>
 	<body>
 		<div class="home">
 			<header>
-				<div class="container">
+				<div class="header-container">
 					<div class="header-data">
 						<div class="header-logo-plane">
 							<a href="index.html"><img src="svg/logo.svg" alt=""></a>
@@ -25,54 +27,54 @@
 							</form>
 						</div><!--search-bar end-->
 						<!-- <div class="header-menu"> -->
-						<div class="menu-plane">
-							<nav class="menu-header-plane">
-								<ul class="menu-header-list">
-									<li>
-										<a href="index.html" title="">
-											<span>
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-													<path fill="#ffffff" d="M16 9.226l-8-6.21-8 6.21v-2.532l8-6.21 8 6.21zM14 9v6h-4v-4h-4v4h-4v-6l6-4.5z"></path>
-												</svg>
-											</span> Home
-										</a>
-									</li>
-									<li>
-										<a href="#" title="">
-											<span>
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-													<path fill="#ffffff" d="M14.5 2h-13c-0.825 0-1.5 0.675-1.5 1.5v10c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-10c0-0.825-0.675-1.5-1.5-1.5zM6.23 8.6l-4.23 3.295v-7.838l4.23 4.543zM2.756 4h10.488l-5.244 3.938-5.244-3.938zM6.395 8.777l1.605 1.723 1.605-1.723 3.29 4.223h-9.79l3.29-4.223zM9.77 8.6l4.23-4.543v7.838l-4.23-3.295z"></path>
-												</svg>
-											</span> Messages
-										</a>
-									</li>
-									<li>
-										<a href="#" title="">
-											<span>
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-													<path fill="#ffffff" d="M6 0l-6 8h6l-4 8 14-10h-8l6-6z"></path>
-												</svg>
-											</span> Notification
-										</a>
-									</li>
-									<li>
-										<a href="#" title="">
-											<span>
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-													<path fill="#ffffff" d="M15 4h-4v-1c0-0.55-0.45-1-1-1h-4c-0.55 0-1 0.45-1 1v1h-4c-0.55 0-1 0.45-1 1v9c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-9c0-0.55-0.45-1-1-1zM6 3.002c0.001-0.001 0.001-0.001 0.002-0.002h3.996c0.001 0.001 0.001 0.001 0.002 0.002v0.998h-4v-0.998zM15 8h-2v1.5c0 0.275-0.225 0.5-0.5 0.5h-1c-0.275 0-0.5-0.225-0.5-0.5v-1.5h-6v1.5c0 0.275-0.225 0.5-0.5 0.5h-1c-0.275 0-0.5-0.225-0.5-0.5v-1.5h-2v-1h14v1z"></path>
-												</svg>
-											</span> Tools
-										</a>
-									</li>
-								</ul><!--menu-header-list end-->
-							</nav><!--menu-header-plane end-->
+						<div class="menu-plane", id="menu-plane">
+							<a href="javascript:void(0);" class="menu-btn-plane" onclick="headerMenu()">
+								<i class="fa fa-bars"></i>
+							</a>
+							<div class="menu-header-plane">
+								<a href="index.html" title="">
+									<span>
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+											<path fill="#ffffff" d="M16 9.226l-8-6.21-8 6.21v-2.532l8-6.21 8 6.21zM14 9v6h-4v-4h-4v4h-4v-6l6-4.5z"></path>
+										</svg>
+									</span> Home
+								</a>
+								<a href="#" title="">
+									<span>
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+											<path fill="#ffffff" d="M14.5 2h-13c-0.825 0-1.5 0.675-1.5 1.5v10c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-10c0-0.825-0.675-1.5-1.5-1.5zM6.23 8.6l-4.23 3.295v-7.838l4.23 4.543zM2.756 4h10.488l-5.244 3.938-5.244-3.938zM6.395 8.777l1.605 1.723 1.605-1.723 3.29 4.223h-9.79l3.29-4.223zM9.77 8.6l4.23-4.543v7.838l-4.23-3.295z"></path>
+										</svg>
+									</span> Messages
+								</a>
+								<a href="#" title="">
+									<span>
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+											<path fill="#ffffff" d="M6 0l-6 8h6l-4 8 14-10h-8l6-6z"></path>
+										</svg>
+									</span> Notification
+								</a>
+								<a href="#" title="">
+									<span>
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+											<path fill="#ffffff" d="M15 4h-4v-1c0-0.55-0.45-1-1-1h-4c-0.55 0-1 0.45-1 1v1h-4c-0.55 0-1 0.45-1 1v9c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-9c0-0.55-0.45-1-1-1zM6 3.002c0.001-0.001 0.001-0.001 0.002-0.002h3.996c0.001 0.001 0.001 0.001 0.002 0.002v0.998h-4v-0.998zM15 8h-2v1.5c0 0.275-0.225 0.5-0.5 0.5h-1c-0.275 0-0.5-0.225-0.5-0.5v-1.5h-6v1.5c0 0.275-0.225 0.5-0.5 0.5h-1c-0.275 0-0.5-0.225-0.5-0.5v-1.5h-2v-1h14v1z"></path>
+										</svg>
+									</span> Tools
+								</a>
+							</div>
 						</div><!--menu-plane end--->
 					</div><!--header-data end-->
-				</div><!--container end-->
+				</div>
 			</header><!--header end-->
-			<main>
-
-			</main>
 		</div>
+		<script>
+			function headerMenu() {
+			  var x = document.getElementById("menu-plane");
+			  if (x.className === "menu-plane") {
+				x.className += " responsive";
+			  } else {
+				x.className = "menu-plane";
+			  }
+			}
+		</script>
 	</body>
 </html>
