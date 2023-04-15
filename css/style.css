@@ -8,8 +8,6 @@ body {
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	/* background-image: url("../svg/bg-animal.svg");
-	background-size: cover; */
 }
 
 ul {
@@ -27,14 +25,30 @@ a {
 	font-weight: bold;
 }
 
-.home {
-	width: 100%;
-}
-
 header {
     float: left;
 	width: 100%;
     background-color: #e2a684;
+}
+
+body, html, .home, header,
+.container, .header-data, .menu-plane, .menu-header-plane, 
+.menu-header-list, .menu-header-list li, .menu-header-list a{
+	height: 100%;
+}
+
+header, .container, .header-data, .menu-plane, .menu-header-plane, 
+.menu-header-list, .menu-header-list li{
+	height: 62px;
+}
+
+.header-data, .menu-plane{
+	display: flex;
+	align-items: center;
+}
+
+.home {
+	width: 100%;
 }
 
 .header-data {
@@ -46,25 +60,25 @@ header {
 .header-logo-plane {
     float: left;
     width: 120px;
-	padding: 5px;
 	margin-right: 20px;
     margin-top: 4px;
 	margin-left: 25px;
 }
 
-.search-bar {
+/* search-bar */
+
+.search-plane {
 	float: left;
 	width: 215px;
-	margin-top: 9px;
 }
 
-.search-bar form {
+.search-plane form {
 	float: left;
 	width: 100%;
 	display: flex;
 }
 
-.search-bar form input{
+.search-plane form input{
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
 	width: 100%;
@@ -75,24 +89,25 @@ header {
 	color: #b2b2b2;
 }
 
-.search-bar form button{
+.search-plane form button{
 	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;
 	height: 38px;
 	background-color: #fff;
 }
 
-/* .header-menu {
-	justify-content: center;
-	align-items: center;
-} */
 
-.menu-header-plane {
-	text-align: center;
+/* menu-palne */
+
+
+.menu-header-plane a {
+	padding: 0 10px;
+	height: 100%;
+	line-height: 62px;
 }
 
 .menu-header-list {
-	display: inline-block;
+	margin: 0;
 }
 
 .menu-header-list li {
@@ -103,7 +118,6 @@ header {
 	display: block;/*设置为块元素*/
 	width: 120px;
 	text-align: center;
-	padding: 10px;
 }
 
 .menu-header-plane a:hover, .menu-header-plane a:active {
@@ -111,39 +125,3 @@ header {
 	color: #b1edfa;
 }
 
-
-
-/* .user-menu-plane {
-	position: relative;
-	display: inline-block;
-}
-
-.user-info {
-	display: flex;
-	width: 38px;
-}
-
-.user-info a {
-	display: block;
-	margin-left: 1px;
-	margin-top: 8px;
-}
-
-.user-account-settings {
-	display: none;
-	position: absolute;
-	border-radius: 5px;
-	background-color: snow;
-	min-width: 200px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	padding: 12px 16px;
-	z-index: 1;
-}
-
-.user-menu-plane:hover .user-account-settings {
-	display: block;
-}
-
-.user-account-settings a{
-	color: black;
-} */
