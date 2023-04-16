@@ -137,7 +137,7 @@ header {
 }
 
 /* 默认隐藏图片 */
-.mySlides {
+.slide {
     display: none;
     background-color: rgb(224, 224, 224);
 }
