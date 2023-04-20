@@ -1,81 +1,93 @@
 @charset "utf-8";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	font-family: 'DM Sans', sans-serif;
 }
 
-body, html, .home {
-    width: 100%;
-    height: 100%;
+body,
+html,
+.home {
+	width: 100%;
+	height: 100%;
 }
 
-header, main, footer {
-    width: 100%;
+header,
+main,
+footer {
+	width: 100%;
 }
 
 ul {
-    list-style: none;
+	list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+	text-decoration: none;
+	color: white;
 }
 
-input[type=text], button[type=submit] {
-    border: 0;
+input[type=text],
+button[type=submit] {
+	border: 0;
 }
 
 /* --------------------------header-------------------------- */
 
-.home, header::after, .header-menu::after {
-    content: "";
-    display: table;
-    clear: both;
+.home,
+header::after,
+.header-menu::after,
+main::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
-header, .search, .header-menu, .header-menu nav ul {
-    display: flex;
-    align-items: center;
+header,
+.search,
+.header-menu,
+.header-menu nav ul {
+	display: flex;
+	align-items: center;
 }
 
-header, .header-menu {
-    background-color: chocolate;
-    height: 60px;
+header,
+.header-menu {
+	background-color: chocolate;
+	height: 60px;
 }
 
 header {
-    position: fixed;
+	position: fixed;
 }
 
 /* --------------------------logo---------------------------- */
 
 .logo {
-    width: 160px;
-    margin: 0 10px;
+	width: 160px;
+	margin: 0 10px;
 }
 
 /* --------------------------search-------------------------- */
 
 .search {
-    margin-right: auto;
+	margin-right: auto;
 }
 
 .search input {
-    width: 100%;
-    border-bottom-left-radius: 5px;
+	width: 100%;
+	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
-    padding: 0 10px;
-    height: 38px;
-    background-color: #fff;
+	padding: 0 10px;
+	height: 38px;
+	background-color: #fff;
 	color: #b2b2b2;
 }
 
 .search button {
-    border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 0 10px;
 	height: 38px;
@@ -85,131 +97,245 @@ header {
 /* --------------------------header-menu-------------------------- */
 
 .header-menu nav ul li a {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0 12px;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0 12px;
 }
 
 .menu-btn {
-    display: none;
-    padding-right: 20px;
-    font-size: 38px;
+	display: none;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 38px;
 }
 
 /* --------------------------main-------------------------- */
 
-.top-divider {
-    width: 100%;
-    height: 80px;
+header {
+	z-index: 9999;
+}
+
+main {
+	z-index: 0;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 65px;
+	height: 100vh;
 }
 
 .main {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0, 10px;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #b2b2b2;
+	width: 100%;
+	height: 100%;
+	margin-left: 100px;
 }
 
-.left, .right {
-    flex-basis: 25%;
-    background-color: rgb(196, 198, 201);
-    border-radius: 5px;
+/* --------------------------left------------------------------ */
+.left {
+	position: fixed;
+	left: 0;
+	top: 10px;
+	margin-left: 10px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.middle {
-    flex-basis: 50%;
+.nav {
+	width: 80px;
+	height: 645px;
+	overflow: hidden;
+	background: rgba(208, 208, 208, 1.0);
+	border-radius: 20px;
+	transition: 0.5s;
 }
 
-.left, .right, .middle {
-    padding: 0 20px;
+.nav:hover {
+	width: 222px;
 }
 
-/* --------------------------slideshow-------------------------- */
-
-.slideshow {
-    border-radius: 5px;
+.btn {
+	width: 60px;
+	height: 10px;
+	display: flex;
+	justify-content: space-around;
+	margin-left: 10px;
+	margin-top: 20px;
 }
 
-/* 幻灯片容器 */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+.btn-item {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
 }
 
-/* 默认隐藏图片 */
-.slide {
-    display: none;
-    background-color: rgb(224, 224, 224);
+.btn-item:nth-child(1) {
+	background: #eb5a56;
 }
 
-/* Next & previous 按钮 */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.btn-item:nth-child(2) {
+	background: #f8bc33;
 }
 
-/* 将 "next button" 放在右侧 */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.btn-item:nth-child(3) {
+	background: #62cb44;
 }
 
-/* 悬停时，添加一点透视的黑色背景颜色 */
-.prev:hover, .next:hover {
-    background-color: rgba(231, 167, 167, 0.8);
+.icon {
+	width: 250px;
+	height: 60px;
+	margin-left: 10px;
+	margin-top: 20px;
+	display: flex;
 }
 
-/* 字幕文字 */
-.text {
-    color: #000000;
-    font-size: 15px;
-    padding: 0 12px;
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    text-align: center;
+.icon-img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 4px solid rgba(255, 255, 255, 0.3);
+	overflow: hidden;
 }
 
-/* 数字文本（1/3 等） */
-.numbertext {
-    color: #000000;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+.icon-con {
+	height: 60px;
+	margin-left: 18px;
 }
 
-/* 点/项目符号/指标 */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.icon-con p {
+	padding-top: 5px;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
+.icon-con h2 {
+	font-weight: 40px;
 }
 
-/* 渐变动画 */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+.line {
+	width: 55px;
+	height: 1px;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 20px 12px;
+	transition: 0.5s;
 }
 
+.nav:hover .line {
+	width: 197px;
+}
+
+.title {
+	width: 80px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+.title p {
+	font-size: 20px;
+}
+
+.menu {
+	width: 205px;
+	margin-left: 12px;
+}
+
+.item {
+	display: flex;
+	position: relative;
+	transition: 0.5s;
+	border-radius: 6px;
+}
+
+.item:hover {
+	background-color: rgba(255, 193, 208, 0.5);
+}
+
+.licon {
+	width: 60px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.con {
+	width: 0;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	overflow: hidden;
+	position: relative;
+	left: -10px;
+	opacity: 0;
+}
+
+.nav:hover .con {
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+}
+
+.ricon {
+	width: 0;
+	height: 50px;
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.nav:hover .ricon {
+	width: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+}
+
+.item span {
+	font-size: 26px;
+}
+
+.ricon span {
+	font-size: 20px;
+	color: #62cb44;
+}
+
+.light {
+	width: 6px;
+	height: 50px;
+	background: #eb5a56;
+	position: absolute;
+	left: -10px;
+	transition: 0.5s;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	opacity: 0;
+}
+
+.item:hover .light {
+	opacity: 1;
+}
+
+.server {
+	width: 60px;
+	background: rgba(255, 255, 255, 0.7);
+	margin-left: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.nav:hover .server {
+	width: 200px;
+}

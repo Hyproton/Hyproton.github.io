@@ -1,4 +1,4 @@
-@media (max-width: 850px) {
+@media (max-width: 820px) {
     .header-menu nav ul a {display: none;}
     .header-menu a.menu-btn {
         display: flex;
@@ -22,29 +22,22 @@
         border-radius: 6px;
         top: 55px;
     }
-    header {
-        z-index: 9999;
-    }
-    main {
-        z-index: 0;
-    }
     .main {
         justify-content: center;
     }
-    .middle {
-        flex-basis: 90%;
-    }
-    .left, .right {
-        display: none;
-    }
 }
 
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+@media (max-width: 320px) {
+	.search {
+		display: none;
+	}
+	.logo {
+		margin-right: 40px;
+	}
+	.menu-btn {
+		position: absolute;
+		font-size: 25px;
+		padding: 0 6px;
+		right: 0;
+	}
 }
