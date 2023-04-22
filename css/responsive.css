@@ -1,43 +1,62 @@
-@media (max-width: 820px) {
-    .header-menu nav ul a {display: none;}
-    .header-menu a.menu-btn {
-        display: flex;
-        z-index: 1;
-    }
-    .header-menu.responsive nav ul {
-        display: block;
-    }
-    .header-menu.responsive nav ul li a {
-        float: none;
-        display: block;
-        text-align: left;
-        padding: 5px 12px;
-    }
-    .header-menu.responsive nav {
-        position: absolute;
-        padding: 10px 0;
-        background-color: rgb(179, 176, 176);
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-        right: 0;
-        border-radius: 6px;
-        top: 55px;
-    }
-    .main {
-        justify-content: center;
-    }
+@media screen and (max-width: 1800px) {
+	.container {
+		width: 80%;
+	}
 }
 
-@media (max-width: 320px) {
-	.search {
+@media screen and (max-width: 1260px) {
+	.container {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.right {
 		display: none;
 	}
-	.logo {
-		margin-right: 40px;
+
+	.left {
+		margin-right: 0;
 	}
-	.menu-btn {
-		position: absolute;
-		font-size: 25px;
-		padding: 0 6px;
-		right: 0;
+}
+
+@media screen and (max-width: 640px) {
+	.nav {
+		display: none;
+	}
+
+	.top,
+	.left {
+		margin-left: 0;
+		box-shadow: 0 0;
+	}
+
+	.top {
+		margin-bottom: 5px;
+	}
+
+	.search-bar {
+		box-shadow: 0 0;
+		margin-bottom: 5px;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.logo {
+		display: none;
+	}
+
+	.top,
+	.top .menu {
+		height: 45px;
+	}
+
+	.icon {
+		width: 16px;
+		height: 16px;
+	}
+
+	.search-bar {
+		height: 40px;
 	}
 }
