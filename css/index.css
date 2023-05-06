@@ -1,0 +1,263 @@
+/*********LoadingPage*************/
+
+#loading {
+    position: absolute;
+    background-color: #FFF;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+#loading_bg {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loader {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ce4233;
+    letter-spacing: 0.2em;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #ce4233;
+    position: absolute;
+    -webkit-animation: load .7s infinite alternate ease-in-out;
+    animation: load .7s infinite alternate ease-in-out;
+}
+
+.loader::before {
+    top: 0;
+}
+
+.loader::after {
+    bottom: 0;
+}
+
+@-webkit-keyframes load {
+    0% {
+        left: 0;
+        height: 30px;
+        width: 15px;
+    }
+
+    50% {
+        height: 8px;
+        width: 40px;
+    }
+
+    100% {
+        left: 235px;
+        height: 30px;
+        width: 15px;
+    }
+}
+
+@keyframes load {
+    0% {
+        left: 0;
+        height: 30px;
+        width: 15px;
+    }
+
+    50% {
+        height: 8px;
+        width: 40px;
+    }
+
+    100% {
+        left: 235px;
+        height: 30px;
+        width: 15px;
+    }
+}
+
+/********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#home {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    word-break: break-all;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.bi {
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.menu-icon {
+    display: none;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-left: 30px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+
+#navigator {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 36px;
+}
+
+#navlist {
+    float: left;
+}
+
+#navlist>li {
+    position: relative;
+    float: left;
+    line-height: 60px;
+    padding: 0 15px;
+}
+
+#navlist .li-content {
+    display: flex;
+    align-items: center;
+}
+
+#navlist>li .bottom-line {
+    width: 100%;
+    height: 4px;
+    background-color: #3395ce;
+    transform: scaleX(0);
+    transition: 0.3s ease-in-out;
+}
+
+#navlist>li:hover .bottom-line {
+    transform: scaleX(1);
+    transition: 0.3s ease-in-out;
+}
+
+#navlist svg {
+    width: 20px;
+    height: 20px;
+}
+
+#navlist a {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#home-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: relative;
+    background-image: url("img/home-cover.webp");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #49b1f5;
+}
+
+#home-cover .cover-word-container {
+    text-align: center;
+    z-index: 1;
+}
+
+#home-cover .cover-word-container .cover-title {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    align-items: center;
+    font-family: Playball, cursive;
+    margin: 10px auto;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+
+#home-cover .cover-word-container .cover-content {
+    color: white;
+    font-size: 24px;
+    font-family: Playball, cursive;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+
+#home-cover .cover-word-container .bi-chevron-down {
+    position: absolute;
+    bottom: 6%;
+    cursor: pointer;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+}
