@@ -1,62 +1,11 @@
-@media screen and (max-width: 1800px) {
-	.container {
-		width: 80%;
-	}
-}
-
-@media screen and (max-width: 1260px) {
-	.container {
-		width: 90%;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	.right {
-		display: none;
-	}
-
-	.left {
-		margin-right: 0;
-	}
-}
-
-@media screen and (max-width: 640px) {
-	.nav {
-		display: none;
-	}
-
-	.top,
-	.left {
-		margin-left: 0;
-		box-shadow: 0 0;
-	}
-
-	.top {
-		margin-bottom: 5px;
-	}
-
-	.search-bar {
-		box-shadow: 0 0;
-		margin-bottom: 5px;
-	}
-}
-
-@media screen and (max-width: 390px) {
-	.logo {
-		display: none;
-	}
-
-	.top,
-	.top .menu {
-		height: 45px;
-	}
-
-	.icon {
-		width: 16px;
-		height: 16px;
-	}
-
-	.search-bar {
-		height: 40px;
-	}
+@media screen and (max-width: 1180px) {
+    #navigator, #sidebar {
+        display: none;
+    }
+    #main-content {
+        width: 100%;
+    }
+    .menu-icon {
+        display: block;
+    }
 }
