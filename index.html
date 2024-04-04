@@ -8,21 +8,49 @@
     <link rel="icon" href="img/mouse.png" sizes="32x32">
 </head>
 <body>
-    <nav class="top">
-        <a class="logo" href="/">
-            <img src="img/mouse.png" alt="Cute little mouse">
-            <b>Hyproton</b>
-            <span>.gallery</span>
-        </a>
-        <div class="search">
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox"></label>
-            <input type="text" class="input" id="input">
+    <div class="container navigation">
+        <div class="row">
+            <a class="col logo" href="/">
+                <img src="img/mouse.png" alt="Cute little mouse">
+                <b>Hyproton</b>
+                <span>.gallery</span>
+            </a>
+            <div class="col search">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox"></label>
+                <input type="text" class="input" id="input">
+            </div>
         </div>
-        <div class="navbar">
-            <a href="#"></a>
+    </div>
+    <div class="container main">
+        <div class="row">
+            <div class="col home-left-column">
+                <div class="calendar">
+                    <header>
+                        <div id="day"></div>
+                        <div id="month"></div>
+                        <a href="" class="other-month last-month" id="last-month"></a>
+                        <a href="" class="other-month next-month" id="next-month"></a>
+                    </header>
+                    <table class="body">
+                        <thead>
+                            <tr>
+                                <td>Sun</td>
+                                <td>Mon</td>
+                                <td>Tue</td>
+                                <td>Web</td>
+                                <td>Thu</td>
+                                <td>Fri</td>
+                                <td>Sat</td>
+                            </tr>
+                        </thead>
+                        <tbody id="days-list"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col home-middle-column"></div>
         </div>
-    </nav>
-    
+    </div>
+    <script type="text/javascript" src="js/calendar.js"></script>
 </body>
 </html>
